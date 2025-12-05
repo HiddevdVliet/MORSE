@@ -21,7 +21,6 @@ device = ArduinoVISADevice("ASRL7::INSTR")
 
 
 def scan():
-    print("test")
     # device.set_output_voltage(volt=3.3)
     # time.sleep(1)
     # device.set_output_voltage(volt=0)
@@ -31,15 +30,18 @@ def scan():
             if lijst_letters[i][j] == ".":
                 device.set_output_voltage(volt=3.3)
                 print("punt")
-                time.sleep(0.1)
+                time.sleep(0.2)
                 device.set_output_voltage(volt=0)
-                time.sleep(0.5)
+                time.sleep(0.2)
             if lijst_letters[i][j] == "-":
                 device.set_output_voltage(volt=3.3)
                 print("streep")
-                time.sleep(1)
+                time.sleep(0.6)
                 device.set_output_voltage(volt=0)
-                time.sleep(0.5)
+                time.sleep(0.2)
+        if lijst_letters[i] == "spatie":
+            time.sleep(1.4)
+        time.sleep(0.6)
 
     # turn off LED after measurements
     device.set_output_value(value=0)
