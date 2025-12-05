@@ -12,19 +12,16 @@ import numpy as np
 from morse.controllers.arduino_device import ArduinoVISADevice, list_resources
 from morse.controllers.morse_translation import translation
 
-
-class InvalidInputError(Exception):
-    pass
-
-
 device = ArduinoVISADevice("ASRL7::INSTR")
 
 
-def scan():
-    # device.set_output_voltage(volt=3.3)
-    # time.sleep(1)
-    # device.set_output_voltage(volt=0)
-    lijst_letters = translation()
+# class MorseExperiment:
+#     def __init__(self):
+#         self.device = ArduinoVISADevice("ASRL7::INSTR")
+
+
+def scan(text):
+    lijst_letters = translation(text=text)
     for i in range(len(lijst_letters)):
         for j in range(len(lijst_letters[i])):
             if lijst_letters[i][j] == ".":
@@ -40,11 +37,11 @@ def scan():
                 device.set_output_voltage(volt=0)
                 time.sleep(0.2)
         if lijst_letters[i] == "spatie":
-            time.sleep(1.4)
-        time.sleep(0.6)
+            time.sleep(1)
+        time.sleep(1)
 
     # turn off LED after measurements
     device.set_output_value(value=0)
 
 
-scan()
+scan("sos sos")

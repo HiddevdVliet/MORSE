@@ -1,6 +1,5 @@
-def translation():
-    tekst = "sos sos"
-    letters = list(tekst)
+def translation(text):
+    letters = list(text)
     lijst_letters = []
     for i in range(len(letters)):
         if letters[i] == "a":
