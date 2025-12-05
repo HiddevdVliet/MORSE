@@ -16,6 +16,7 @@ name = "morse"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "morsecodepy" },
     { name = "numpy" },
     { name = "pyqtgraph" },
     { name = "pyserial" },
@@ -26,12 +27,22 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "morsecodepy", specifier = ">=4.2.1" },
     { name = "numpy", specifier = ">=2.3.5" },
     { name = "pyqtgraph", specifier = ">=0.14.0" },
     { name = "pyserial", specifier = ">=3.5" },
     { name = "pyside6", specifier = ">=6.10.1" },
     { name = "pyvisa", specifier = ">=1.15.0" },
     { name = "pyvisa-py", specifier = ">=0.8.1" },
+]
+
+[[package]]
+name = "morsecodepy"
+version = "4.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ab/8a/bc1a5bd1021680da46c53e5c5c7626afc64947eafc16690e5f20ea99fc5c/morsecodepy-4.2.1.tar.gz", hash = "sha256:f95aff2d19fb966f0faeab092334c0128e367bd90298d19abd238315c0579b63", size = 8386, upload-time = "2025-11-22T17:58:51.82Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/34/ae12d3aa40fae62257b6a4c721efb68b0d4fbb02f7de5e95c4e8c94dc34c/morsecodepy-4.2.1-py3-none-any.whl", hash = "sha256:b40e3a53d5d40b7b07155943d38ba68edb1070a727f0cae467a33fd46c10765b", size = 10464, upload-time = "2025-11-22T17:58:50.506Z" },
 ]
 
 [[package]]
