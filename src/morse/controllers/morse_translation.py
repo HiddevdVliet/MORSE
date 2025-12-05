@@ -1,5 +1,5 @@
 def translation():
-    tekst = "sos"
+    tekst = "sos sos"
     letters = list(tekst)
     lijst_letters = []
     for i in range(len(letters)):
@@ -80,6 +80,9 @@ def translation():
             lijst_letters.append(k)
         if letters[i] == "z":
             k = list("--..")
+            lijst_letters.append(k)
+        if letters[i] == " ":
+            k = "spatie"
             lijst_letters.append(k)
 
     print(lijst_letters)
