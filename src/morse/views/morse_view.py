@@ -6,7 +6,7 @@ import pyqtgraph as pg
 from PySide6 import QtWidgets
 from PySide6.QtCore import Slot
 
-from morse.models.morse_experiment import scan
+# from morse.models.morse_experiment import scan
 from morse.ui_mainwindow import Ui_MainWindow
 
 
@@ -17,11 +17,13 @@ class UserInterface(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        self.ui.text_message.setPlaceholderText("Write your message here")
         self.ui.send_button.clicked.connect(self.send_signal)
 
     def send_signal(self):
         text = self.ui.text_message.toPlainText()
-        scan(text=text)
+        print(text)
+        # scan(text=text)
 
 
 def main():
