@@ -12,12 +12,13 @@ import numpy as np
 from morse.controllers.arduino_device import ArduinoVISADevice, list_resources
 from morse.controllers.morse_translation import translation
 
+
 # initiate communication with Arduino
-port = list_resources()[0]
-device = ArduinoVISADevice(port)
 
+def scan(text, port):
 
-def scan(text):
+    device = ArduinoVISADevice(port)
+
     # translate message to morse coe
     lijst_letters = translation(message=text)
     device.set_output_voltage(0)
