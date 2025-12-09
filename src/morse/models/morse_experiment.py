@@ -12,7 +12,7 @@ import numpy as np
 from morse.controllers.arduino_device import ArduinoVISADevice, list_resources
 from morse.controllers.morse_translation import translation
 
-device = ArduinoVISADevice("ASRL7::INSTR")
+device = ArduinoVISADevice("ASRL12::INSTR")
 
 
 # class MorseExperiment:

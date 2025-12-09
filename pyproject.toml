@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "matplotlib>=3.10.7",
     "morsecodepy>=4.2.1",
     "numpy>=2.3.5",
     "pyqtgraph>=0.14.0",

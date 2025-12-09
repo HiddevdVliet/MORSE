@@ -146,3 +146,4 @@ class ArduinoVISADevice:
         """
         
         self.device.close()
+
