@@ -22,6 +22,7 @@ class UserInterface(QtWidgets.QMainWindow):
         self.ui.text_message.setPlaceholderText("Write your message here")
         self.ui.send_button.clicked.connect(self.send_signal)
 
+    @Slot()
     def send_signal(self):
         input = self.ui.text_message.toPlainText()
         print(input)
