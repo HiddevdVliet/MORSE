@@ -1,5 +1,5 @@
-def translation(text):
-    letters = list(text)
+def translation(message):
+    letters = list(message)
     lijst_letters = []
     for i in range(len(letters)):
         if letters[i] == "a":
@@ -9,7 +9,7 @@ def translation(text):
             k = list("-...")
             lijst_letters.append(k)
         if letters[i] == "c":
-            k = list("- -.")
+            k = list("-.-.")
             lijst_letters.append(k)
         if letters[i] == "d":
             k = list("-..")
